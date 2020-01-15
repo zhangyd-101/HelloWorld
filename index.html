@@ -10,33 +10,8 @@
     <link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
-<!--导航-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!--小屏幕导航按钮和logo-->
-        <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="index.html" class="navbar-brand">HelloWorld</a>
-        </div>
-        <!--小屏幕导航按钮和logo-->
-        <!--导航-->
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#bbs">作品集</a></li>
-                <li><a href="#html5">实用官网</a></li>
-                <li><a href="#contact">联系我们</a></li>
-            </ul>
-        </div>
-        <!--导航-->
 
-    </div>
-</nav>
-<!--导航-->
+<link rel="import" href="head.html" id="headpage">
 
 <!--home-->
 <section id="home">
@@ -70,7 +45,7 @@
             <div class="col-md-4">
                 <a href="rose.html" target="_blank">
                     <img src="imgs/a.png" class="img-responsive" alt=""/>
-                    <h3>旋转玫瑰🌹</h3>
+                    <h3>旋转玫瑰</h3>
                     <p>利用css旋转样式、背景音乐</p>
                 </a>
             </div>
@@ -299,24 +274,8 @@
 <!--footer-->
 
 
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<script src="js/wow.min.js"></script>
 <script>
-    $(function(){
-        /*导航跳转效果插件*/
-        $('.nav').singlePageNav({
-            //向上偏移量
-            offset:70
-        });
-        /*小屏幕导航点击关闭菜单*/
-        $('.navbar-collapse a').click(function(){
-            // 向上折叠隐藏
-            $('.navbar-collapse').collapse('hide');
-        });
-        new WOW().init();
-    })
+    document.write(headpage.import.body.innerHTML);
 </script>
 </body>
 </html>
