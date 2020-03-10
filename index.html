@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
+
+    <link rel="import" href="head.html" id="headPage">
+
+
 </head>
 <body>
-
-<link rel="import" href="head.html" id="headpage">
+    <div id="header"></div>
 
 <!--home-->
 <section id="home">
@@ -272,10 +275,18 @@
     </div>
 </footer>
 <!--footer-->
+<script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+
+        $(function () {
+            $("#header").load('head.html')
+        })
+     //   console.log("headPage"+headPage);
+        // Mac 下报错
+      //  document.write(headPage.import.body.innerHTML)
+        // document.write(headpage.import.body.innerHTML);
+    </script>
 
 
-<script>
-    document.write(headpage.import.body.innerHTML);
-</script>
 </body>
 </html>

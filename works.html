@@ -10,6 +10,7 @@
 <body>
 
 <link rel="import" href="head.html" id="headpage">
+<div id="header"></div>
 
 <!--bbs-->
 <section id="works">
@@ -43,9 +44,12 @@
 <!--bbs-->
 
 
-
+<script src="js/jquery-1.11.1.min.js"></script>
 <script>
-    document.write(headpage.import.body.innerHTML);
+
+    $(function () {
+        $("#header").load('head.html')
+    })
 </script>
 </body>
 </html>
